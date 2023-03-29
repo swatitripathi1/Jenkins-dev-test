@@ -4,10 +4,9 @@ pipeline {
     }
 
     stages {
-        stage('Hello') {
+        stage('Build') {
             steps {
                 sh "ls"
-                sh "python aes_des.py"
             }
         }
     }
