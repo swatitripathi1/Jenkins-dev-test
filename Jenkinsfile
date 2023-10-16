@@ -9,8 +9,8 @@ pipeline {
                 sh "ls"
                 sh "pwd"
                 sh 'uname -a'
-                sh "python sum.py"
-                sh "python aes_des.py"
+                sh "python3 sum.py"
+                sh "python3 aes_des.py"
             }
         }
         stage('test1') {
