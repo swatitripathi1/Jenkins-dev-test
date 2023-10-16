@@ -8,7 +8,7 @@ pipeline {
             steps {
                 sh "ls"
                 sh "pwd"
-                sh username -a
+                sh 'uname -a'
                 sh "python sum.py"
                 sh "python aes_des.py"
             }
