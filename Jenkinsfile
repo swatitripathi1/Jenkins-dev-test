@@ -17,15 +17,16 @@ pipeline {
     parallel {
         stage('parallel_stage_1') {
             steps{
-                echo "parallel_stage_1"
                 sh "sleep 20"
+                echo "parallel_stage_1"
+
             }
         }
 
         stage('parallel_stage_2'){
             steps{
                 echo "parallel_stage_2"
-                                sh "sleep 20"
+                sh "sleep 30"
             }
 
         }
