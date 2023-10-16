@@ -4,7 +4,7 @@ pipeline {
     }
 
     stages {
-        stage('Hello') {
+        stage('Commands') {
             steps {
                 sh "ls"
                 sh "pwd"
