@@ -4,7 +4,7 @@ pipeline {
     }
 
     stages {
-        stage('Build') {
+        stage('Build-1') {
             steps {
                 sh 'uname -a'
                 sh 'ls'
