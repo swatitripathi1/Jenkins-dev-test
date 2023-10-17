@@ -10,7 +10,7 @@ pipeline {
                 sh "pwd"
                 sh 'uname -a'
                 sh "python3 sum.py"
-                sh "python3 aes_des.py"
+
             }
         }
         stage('test1') {
