@@ -8,8 +8,9 @@ pipeline {
             steps {
                 sh 'uname -a'
                 sh 'ls'
-                sh 'pwd'
+
                 sh 'ifconfig'
+                sh 'pwd'
 
             }
         }
