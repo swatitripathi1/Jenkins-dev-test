@@ -1,36 +1,40 @@
 pipeline {
     agent {
-        label 'server'
+        label 'ubuntu'
     }
 
     stages {
-        stage('Commands') {
+        stage('Build-1') {
             steps {
-                sh "ls"
-                sh "pwd"
                 sh 'uname -a'
-                sh "python3 sum.py"
-                sh "python3 aes_des.py"
+                sh 'pwd'
+                sh 'ifconfig'
+                sh 'ls'
+                which python
+
             }
         }
-        stage('test1') {
-    parallel {
-        stage('parallel_stage_1') {
+        stage('Test2') {
+    stages {
+
+        stage('_stage_1') {
             steps{
+
+                echo "_stage_1"
                 sh "sleep 20"
-                echo "parallel_stage_1"
-
             }
         }
 
-        stage('parallel_stage_2'){
+        stage('_stage_2'){
             steps{
-                echo "parallel_stage_2"
-                sh "sleep 30"
+
+                echo "_stage_2"
+                sh "sleep 20"
             }
 
         }
-      // One or more stages need to be included within the parallel block.
+      // One or more stages need to be included within the stages block.
+
     }
   }
     }
