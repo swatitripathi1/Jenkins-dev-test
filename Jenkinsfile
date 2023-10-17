@@ -6,9 +6,11 @@ pipeline {
     stages {
         stage('Commands') {
             steps {
+
                 sh "ls"
-                sh "pwd"
                 sh 'uname -a'
+                sh "pwd"
+
                 sh "python3 sum.py"
 
             }
